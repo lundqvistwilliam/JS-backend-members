@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+header {
+    width: 100%;
+    height: 8vh;
+    background: rgb(91,152,215);
+    background: linear-gradient(90deg, rgba(91,152,215,1) 63%, rgba(60,109,241,1) 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+#members-list {
+    flex-grow: 1;
+    padding-bottom: 50px;
+}
+
+
+#headerTitle {
+    color:white;
+    font-size: 30px;
+}
+
+li {
+    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    margin: 10px;
+    list-style: none;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+li a {
+    color:black;
+}
+
+footer {
+    background: rgb(91,152,215);
+    background: linear-gradient(90deg, rgba(91,152,215,1) 63%, rgba(60,109,241,1) 100%);
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color:white;
+}
+
+#hero {
+    text-align: center;
+    height: 20%;
+    width: 100%;
+    background: rgb(215,91,106);
+    background: linear-gradient(90deg, rgba(215,91,106,1) 100%, rgba(241,60,182,1) 100%);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    margin: 5px;
+}
+
+#createUserForm {
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+}

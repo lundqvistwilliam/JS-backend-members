@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="public/style.css">
+  </head>
+<body>
+  <%- include('header'); -%>
+
+    <h1>Our members:</h1>
+  <ul id="members-list">
+    <% if (members && members.length) { %>
+      <ul>
+        <% for (let i = 0; i < members.length; i++) { %>
+          <li>
+            <%= 'Name: ' + members[i].name %>
+            <br>
+            <%= 'Position: ' + members[i].position %>
+            <br>
+            <br>
+            <a href="/members/<%= members[i]._id %>">Click to show details</a>
+          </li>
+        <% } %>
+      </ul>
+    <% } else { %>
+      <% console.log("Not found..."); %>
+      <p>No members found. Add members <a href="/create">here</a></p>
+    <% } %>
+  </ul>
+  <%- include('footer'); -%>
+
+</body>
+</html>

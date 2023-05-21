@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <%- include('header'); -%>
+    <div id="container">
+    <form action="/members/create" method="post" id="createUserForm">
+        <label for="name">Name</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Firstname Lastname">
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="text" id="email" name="email" placeholder="Email">
+        <br>
+        <label for="phoneNumber">Phone Number</label>
+        <br>
+        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Ex. 9876467541">
+        <br>
+        <label for="position">Position</label>
+        <br>
+        <select name="position" id="position">
+            <option value="" disabled>Select position</option>
+            <option value="Defender">Defender</option>
+            <option value="Midfielder">Midfielder</option>
+            <option value="Forward">Forward</option>
+        </select>
+        <br>
+        <input type="hidden" id="joinDate" name="joinDate" value="<%= new Date().toISOString() %>">
+        <button>Save</button>
+    </form>
+</div>
+<%- include('footer'); -%>
+</body>
+</html>
